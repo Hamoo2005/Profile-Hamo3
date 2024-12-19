@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile | Hamo</title>S
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+
+    
+
+    <!-- css -->
+    
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <header class="header">
+        <a href="#" class="logo">profile|Hamo Ahmed</a>
+        <div id="menu-icons" class="bx bx-menu"></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#My Project">My Project</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Conect</a>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+     <section class="home" id="home">
+        <div class="home-content">
+            <h3> Hello, It's Me</h3>
+            <h1>Hamo Ahmed</h1>
+            <style>
+                h3 {
+                    font-family: Arial, sans-serif;
+                    color: #ffffff;
+                }
+        
+                /* تأثير الكتابة */
+                .multiple-text {
+                    font-weight: bold;
+                    color: #0ef;
+                    display: inline-block;
+                    border-right: 3px solid #0ef; /* لمحاكاة المؤشر */
+                    padding-right: 5px;
+                    animation: blinkCaret 0.75s step-end infinite;
+                }
+        
+                /* تأثير وميض المؤشر */
+                @keyframes blinkCaret {
+                    50% { border-color: transparent; }
+                }
+            </style>
+             <style>
+                img {
+                    width: 250px;  /* عرض الصورة */
+                    height: auto;  /* الحفاظ على النسبة الأصلية للطول */
+                }
+            </style>
+        </head>
+        <body>
+            <h3>And I'm A <span class="multiple-text"></span></h3>
+        
+            <script>
+                const texts = ["Full Stack Developer", "Web Developer", "Software Engineer"];
+                let index = 0;
+                let spanElement = document.querySelector(".multiple-text");
+        
+                // دالة لإزالة النص الحالي وكتابة نص جديد مع تأثير المسح والكتابة من جديد
+                function typeAndEraseText() {
+                    let text = texts[index];
+                    let i = 0;
+                    let currentText = "";
+        
+                    // دالة لكتابة النص حرف حرف
+                    function writeText() {
+                        if (i < text.length) {
+                            currentText += text.charAt(i);
+                            spanElement.innerText = currentText; // تحديث النص المكتوب
+                            i++;
+                            setTimeout(writeText, 150); // الانتظار بين الحروف
+                        } else {
+                            // بعد الكتابة، الانتظار قليلًا ثم مسح النص حرفًا حرفًا
+                            setTimeout(eraseText, 1000); // الانتظار 1 ثانية بعد الكتابة
+                        }
+                    }
+        
+                    // دالة لمسح النص حرفًا حرفًا
+                    function eraseText() {
+                        if (currentText.length > 0) {
+                            currentText = currentText.slice(0, -1); // حذف آخر حرف
+                            spanElement.innerText = currentText; // تحديث النص
+                            setTimeout(eraseText, 100); // الانتظار بين الحروف أثناء المسح
+                        } else {
+                            // بعد المسح، الانتقال إلى النص التالي
+                            index = (index + 1) % texts.length; // الانتقال إلى النص التالي في المصفوفة
+                            setTimeout(typeAndEraseText, 500); // الانتظار قليلًا ثم البدء من جديد
+                        }
+                    }
+        
+                    writeText(); // بدء الكتابة
+                }
+        
+                // تشغيل التغيير عند تحميل الصفحة
+                window.onload = typeAndEraseText;
+            </script>
+            <p>I am a passionate Full Stack developer focused on designing and building innovative technological solutions. I work on developing integrated web applications that prioritize excellent user experience and high performance.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/mohmaeda.esmail?mibextid=ZbWKwL"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/hamo_2005_0/profilecard/?igsh=MTZiYXV6YTJqOGg0Zg=="><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="
+                https://www.linkedin.com/in/mohamed-esmail-842a27312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://github.com/Hamoo2005"><i class='bx bxl-github' ></i></a>
+            </div>
+            <a href="#" class="btn">CV</a>
+
+        </div>
+
+        <div class="home-imag">
+            <img src="mos.jpg" alt="images">
+        </div>
+     </section>
+
+     <!-- about section design -->
+      <section class="about" id="about">
+        <div class="about-imag">
+            <img src="mol.jpg">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Full Stack Developer! <span>Now</span></h3>
+            <p>"I am a Back-end developer specializing in building web applications using Python and Django. I have experience in designing and building robust, scalable systems, as well as working with databases like MySQL and PostgreSQL. I am also skilled in designing efficient and seamless APIs using modern technologies. Although my main focus is on Back-end development, I also have a basic understanding of Front-end development with Bootstrap and  Html and css . My goal is to develop high-performance web applications that provide an excellent user experience."</p>
+            <a href="#" class="btn">Read More</a>
+        </div>
+      </section>
+
+
+      <!-- services sechtion design -->
+       <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bx-code-alt'></i>
+                <h3>Web Development</h3>
+                <p>As a Full Stack Developer, I offer a range of services to help bring your web projects to life. Whether you're looking to build a dynamic website, a robust web application, or a custom backend system, I provide tailored solutions to meet your needs.
+
+                    Frontend Development
+                    I create engaging, responsive, and user-friendly websites using the latest technologies such as HTML, CSS, JavaScript, and frameworks like Bootstrap. Your website will not only look great but also work seamlessly across all devices and screen sizes.
+                    
+                    Backend Development
+                    I specialize in building strong and scalable backends using Python and Django. I ensure that your web applications are fast, secure, and able to handle high traffic, offering solutions that include API development, database management, and server-side logic.
+                    
+                    Full Stack Development
+                    As a full stack developer, I can handle both the frontend and backend of your project. This means I can create end-to-end solutions, from building the user interface to developing the server-side functionalities and ensuring smooth integration between both parts.
+                    
+                    Web Application Development
+                    Whether you're building a simple web app or a complex platform, I use the best practices to ensure high performance, security, and scalability. I focus on creating applications that provide value and improve the user experience.
+                    
+                    Consultation and Support
+                    I also offer consultation for businesses and individuals looking to improve their web presence or solve technical challenges. Whether it's about improving website performance, enhancing security, or adding new features, I'm here to help.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+       </section>
+
+
+
+       <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+    
+        <div class="skills-container">
+            <div class="skill">
+                <i class="fab fa-html5"></i> <!-- أيقونة HTML -->
+                <p>HTML</p>
+                <div class="percentage">100%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+            
+            
+    
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i> <!-- أيقونة CSS -->
+                <p>CSS</p>
+                <div class="percentage">100%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+    
+            <div class="skill">
+                <i class="fab fa-js"></i> <!-- أيقونة Python -->
+                <p>JavaScript</p>
+                <div class="percentage">80%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+    
+            <div class="skill">
+                <i class='bx bxl-java'></i>
+                <p>Java</p>
+                <div class="percentage">100%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+    
+            <div class="skill">
+                <i class="fab fa-python"></i> <!-- أيقونة Python -->
+                <p>Python</p>
+                <div class="percentage">80%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+            
+    
+            <div class="skill">
+                <i class="fas fa-database"></i> <!-- أيقونة MySQL -->
+                <p>SQL Server</p>
+                <div class="percentage">80%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+    
+            <div class="skill">
+                <i class="fab fa-php"></i> <!-- أيقونة Git -->
+                <p>php</p>
+                <div class="percentage">80%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+    
+            <div class="skill">
+                <i class="fab fa-github"></i> <!-- أيقونة GitHub -->
+                <p>GitHub</p>
+                <div class="percentage">80%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+
+              <!-- إضافة أيقونة JavaScript -->
+              <div class="skill">
+                <i class="fas fa-paint-brush"></i> <!-- أيقونة تصميم الجرافيك -->
+                <p>Graphic Design</p>
+                <div class="percentage">100%</div> <!-- النسبة المئوية تحت الأيقونة -->
+            </div>
+            
+</div>
+    </section>
+
+ <!-- portfolio section design -->
+<section class="My Project" id="My Project">
+    <h2 class="heading">latest <span>project</span></h2>
+
+    <div class="portfolio-container">
+        <!-- First Project -->
+        <div class="portfolio-box">
+            <img src="Screenshot 2024-12-19 051828.png" alt="" class="portfolio-img">
+            <div class="portfolio-layer">
+                <h4>fekra-design</h4>
+                <p></p>
+                <a href="https://hamoo2005.github.io/fekra-design1/"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <!-- Second Project -->
+        <div class="portfolio-box">
+            <img src="سفن-في-بعد-تعديل.png" alt="" class="portfolio-img">
+            <div class="portfolio-layer">
+                <h4>تصميم اعلان سفن</h4>
+                <p></p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <!-- Third Project -->
+        <div class="portfolio-box">
+            <img src="فوري.png" alt="" class="portfolio-img">
+            <div class="portfolio-layer">
+                <h4>تصميم اعلان فوري</h4>
+                <p></p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <!-- Fourth Project -->
+        <div class="portfolio-box">
+            <img src="عقارات-بعد-تعديل-بس-مش-فيس.png" alt="" class="portfolio-img">
+            <div class="portfolio-layer">
+                <h4>تصميم اعلان عقاراتe</h4>
+                <p></p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+
+        <!-- Fifth Project -->
+        <div class="portfolio-box">
+            <img src="عياده--اسنان.png" alt="" class="portfolio-img">
+            <div class="portfolio-layer">
+                <h4>تصميم اعلان عياده--اسنان</h4>
+                <p></p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        
+        <!-- Sixth Project -->
+        <div class="portfolio-box">
+            <img src="جهنيه-بعد-التعديل.png" alt="" class="portfolio-img">
+            <div class="portfolio-layer">
+                <h4>تصميم اعلان جهينه</h4>
+                <p></p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+        <div class="portfolio-box">
+            <img src="مانجو1.png" alt="" class="portfolio-img">
+            <div class="portfolio-layer">
+                <h4>تصميم اعلان مانجو</h4>
+                <p></p>
+                <a href="#"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form id="form">
+        <div class="input-box">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-box">
+            <input type="number" name="mobileNumber" placeholder="Mobile Number" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+        <!-- قسم التقييم باستخدام النجوم -->
+        <div class="rating">
+            <label for="rating" class="rate-label">Rate our website:</label>
+            <div class="stars">
+                <input type="radio" name="star" id="star1" value="5">
+                <label for="star1" class="star">&#9733;</label>
+                <input type="radio" name="star" id="star2" value="4">
+                <label for="star2" class="star">&#9733;</label>
+                <input type="radio" name="star" id="star3" value="3">
+                <label for="star3" class="star">&#9733;</label>
+                <input type="radio" name="star" id="star4" value="2">
+                <label for="star4" class="star">&#9733;</label>
+                <input type="radio" name="star" id="star5" value="1">
+                <label for="star5" class="star">&#9733;</label>
+            </div>
+        </div>
+
+        <!-- قسم إدخال التعليق -->
+        <div class="comment-box">
+            <label for="comment" class="comment-label">Add your comment:</label>
+            <textarea id="comment" name="comment" cols="30" rows="5" placeholder="Write your comment here..." required></textarea>
+        </div>
+
+        <input type="submit" value="Send Message" class="btn">
+    </form>
+
+    <!-- مكان لعرض رسالة النجاح -->
+    <div id="successMessage" class="success-message" style="display: none;">
+        تم إرسال الرسالة، سوف يتم الرد قريبًا
+    </div>
+
+    <script>
+        // دالة لمعالجة إرسال النموذج
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+
+            // إخفاء النموذج
+            document.getElementById('form').style.display = 'none';
+
+            // عرض رسالة النجاح
+            document.getElementById('successMessage').style.display = 'block';
+
+            // طباعة التقييم والتعليق
+            const rating = document.querySelector('input[name="star"]:checked')?.value || 0;
+            const comment = document.getElementById('comment').value;
+            console.log('تم تقييم الموقع بـ:', rating, 'نجوم');
+            console.log('التعليق:', comment);
+        });
+    </script>
+
+    <style>
+        /* تنسيق النجوم */
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* مسافة بين النجوم */
+        }
+
+        .stars .star {
+            font-size: 60px; /* تكبير حجم النجوم */
+            color: #dcdcdc; /* اللون الافتراضي للنجوم */
+            cursor: pointer;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .stars .star:hover,
+        .stars .star:hover ~ .star {
+            color: #ffa500; /* اللون البرتقالي عند التمرير */
+        }
+
+        .stars input[type="radio"] {
+            display: none; /* إخفاء مربعات التحديد */
+        }
+
+        .stars input[type="radio"]:checked + .star,
+        .stars input[type="radio"]:checked + .star ~ .star {
+            color: #ffcc00; /* اللون الذهبي للنجوم المحددة */
+        }
+
+        .stars .star:active {
+            transform: scale(1.2); /* تكبير النجمة عند النقر */
+        }
+
+        /* تنسيق النص */
+        .rating,
+        .comment-box {
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .rate-label,
+        .comment-label {
+            display: block;
+            font-size: 30px; /* تكبير حجم النص */
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* تنسيق التعليق */
+        .comment-box textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* إعدادات النموذج */
+        .input-box input,
+        textarea {
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+    background-color: #0ef; /* لون الزر الأساسي */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000; /* لون النص */
+    transition: all 0.3s ease; /* تأثير انتقال سلس */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* ظل الزر */
+}
+
+.btn:hover {
+    background-color: #00c8ff; /* تغيير اللون عند التمرير */
+    color: #fff; /* تغيير لون النص عند التمرير */
+    transform: scale(1.1); /* تكبير الزر قليلاً */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* تكثيف الظل */
+}
+
+.btn:active {
+    transform: scale(0.95); /* تصغير الزر عند الضغط */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* تقليل الظل */
+}
+
+    </style>
+</section>
+
+
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copy right &copy; 2024 by Hamo | All Rights Reserved.</p>
+        
+        <!-- إضافة معلومات الاتصال -->
+        <p><strong>Email:</strong> <a href="mailto:mohmamdesmil@gmail.com" style="color: #0ef; text-decoration: none;">mohmamdesmil@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:01157875635" style="color: #0ef; text-decoration: none;">01157875635</a></p>
+        
+        <p><strong>Address:</strong> Beheira , Damanhour</p>
+        
+    </div>
+
+    <div class="footer-icontop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+</footer>
+
+
+<!-- scroll reveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- typed js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
